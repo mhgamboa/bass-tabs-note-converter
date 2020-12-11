@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Bass Tabs Note Converter",
+  "version": "1.0",
+  "description": "Converts fret numbers into lettered notes",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://tabs.ultimate-guitar.com/*"],
+          "js": ["script.js"]
+      }
+  ]
+}
