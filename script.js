@@ -132,8 +132,9 @@ const fretNotes = {
 };
 
 const tabSection = document.querySelector("._3zygO");
+let url = window.location.hostname;
 
-const replaceText = (element) => {
+const replaceBassTabs = (element) => {
   let dashRegex = /(——|--)/gi;
   if (element.hasChildNodes()) {
     element.childNodes.forEach(replaceText);
@@ -154,4 +155,6 @@ const replaceText = (element) => {
   }
 };
 
-tabSection == null ? null : replaceText(tabSection);
+if (url === "tabs.ultimate-guitar.com") {
+  replaceBassTabs(tabSection);
+}
