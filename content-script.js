@@ -32,9 +32,13 @@ const fretNotesArray = {
     "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#",
     "g", "g#", "a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#"
   ],
+  Bb: [
+    "B♭", "B", "C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A",
+    "b♭", "b", "c", "d♭", "d", "e♭", "e", "f", "g♭", "g", "g#", "a"
+  ],
   B: [
     "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#",
-    "b","c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#"
+    "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#"
   ],
 };
 
@@ -50,7 +54,7 @@ if (window.location.hostname == "tabs.ultimate-guitar.com") {
         line.childNodes[0].textContent = line.childNodes[0].textContent.replace(/[0-9]+/gmi, (fretNumber) => {
           let fretNote = fretNotesArray[openString][fretNumber];
           if(!fretNote) {
-            //If same note is repeated twice without a "-" treat them as two seperate numbers
+            //If same note/fret number is repeated twice without a "-" inbetween them treat them as two seperate numbers
             fretNote = fretNumber.split('').map(newFretNumber => fretNotesArray[openString][newFretNumber]).join('');
           }
           //Ternary added to make sure "undefined" isn't returned

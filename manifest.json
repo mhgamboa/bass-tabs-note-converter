@@ -2,10 +2,7 @@
   "manifest_version": 2,
   "name": "Bass Tabs Note Converter (Beta)",
   "version": "0.2",
-  "description": "Converts fret numbers into lettered notes. Only works on some Bass tabs found on https://tabs.ultimate-guitar.com. Very limited functionality, cannot be turned on and off.",
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
+  "description": "Automatically converts fret numbers into lettered notes. Only works on https://tabs.ultimate-guitar.com for most bass tabs.",
   "background": {
     "scripts": [
       "background-script.js"
